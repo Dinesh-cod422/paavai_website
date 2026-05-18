@@ -705,6 +705,11 @@
     min-height: auto;
     grid-template-columns: 1fr;
     padding-top: 22px;
+    gap: 40px;
+  }
+
+  .heroShowcaseContainer {
+    width: 100%;
   }
 
   .specPanel {
@@ -717,120 +722,274 @@
 
   .storyBand {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .storyStats {
+    margin-top: 10px;
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   .topNav {
-    height: auto;
-    align-items: stretch;
-    flex-direction: column;
-    border-radius: 24px;
-    padding: 14px;
+    height: 56px;
+    margin: 12px auto 0;
+    padding: 0 16px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
   }
 
   .logo {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .navLinks {
-    justify-content: center;
-    overflow-x: auto;
+    display: none; /* Hide links on mobile/tablet for high-end clean nav */
   }
 
   .navRight {
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: flex-end;
+  }
+
+  .locationText {
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+
+  .navCallButton {
+    padding: 8px 14px;
+    font-size: 10px;
   }
 
   .overlay {
-    padding-top: 20px;
+    padding-top: 16px;
+    width: min(100% - 24px, 720px);
   }
 
   .mainContent {
-    gap: 28px;
+    gap: 32px;
   }
 
   .hardwareImageCard {
-    width: min(360px, 100%);
+    width: min(380px, 100%);
+    aspect-ratio: 0.9;
   }
 
   .hardwareImage {
-    padding: 62px 34px 64px;
+    padding: 48px 24px;
   }
 
   .productCardTopline,
   .productCardCaption {
-    left: 16px;
-    right: 16px;
+    left: 18px;
+    right: 18px;
   }
 
-  .benefitGrid,
+  .benefitGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .benefitGrid > *:last-child {
+    grid-column: span 2; /* Stretch last benefit on 2-col grid */
+  }
+
+  .benefitPill {
+    min-height: auto;
+    padding: 12px 14px;
+    font-size: 11.5px;
+    border-radius: 14px;
+  }
+
   .specsGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
   }
 
-  .buttonGroup,
-  .applePrimaryBtn,
-  .appleSecondaryBtn {
+  .specRow {
+    min-height: auto;
+    padding: 12px 14px;
+    border-radius: 16px;
+  }
+
+  .specLabel {
+    margin-bottom: 4px;
+    font-size: 9px;
+  }
+
+  .specValue {
+    font-size: 12px;
+  }
+
+  .buttonGroup {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
     width: 100%;
   }
 
+  .applePrimaryBtn,
+  .appleSecondaryBtn {
+    flex: 1;
+    width: auto;
+    padding: 12px 16px;
+    font-size: 12px;
+    justify-content: center;
+  }
+
   .storyStats {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .storyStats span {
+    min-height: auto;
+    padding: 12px;
+    border-radius: 14px;
+    font-size: 10.5px;
+  }
+
+  .storyStats strong {
+    font-size: 26px;
   }
 
   .footer {
     flex-direction: column;
     text-align: center;
+    gap: 12px;
   }
 
   .footerRight {
     justify-content: center;
+    width: 100%;
   }
 }
 
-@media (max-width: 520px) {
-  .pageContainer {
-    overflow-x: hidden;
-  }
-
-  .topNav,
-  .overlay {
-    width: min(100% - 20px, 480px);
+@media (max-width: 480px) {
+  .topNav {
+    padding: 0 10px 0 14px;
+    gap: 6px;
+    width: calc(100% - 16px);
+    margin: 8px auto 0;
   }
 
   .logoTamil {
-    font-size: 18px;
+    font-size: 16px;
   }
 
-  .navLinks {
-    display: none;
+  .logoEnglish {
+    font-size: 9px;
+    letter-spacing: 1px;
   }
 
-  .navRight {
-    flex-direction: column;
+  .logoDivider {
+    height: 12px;
   }
 
-  .locationText,
+  .locationText {
+    display: none; /* Hide location on small mobile screens to keep bar clean */
+  }
+
   .navCallButton {
-    width: 100%;
-    justify-content: center;
+    padding: 6px 11px;
+    font-size: 9.5px;
+  }
+
+  .overlay {
+    width: calc(100% - 16px);
   }
 
   .tamilTitle {
-    font-size: 44px;
+    font-size: clamp(34px, 10vw, 44px);
   }
 
   .englishTitle {
-    font-size: 14px;
+    font-size: 13px;
+    letter-spacing: 1.5px;
   }
 
   .sloganItalic {
-    font-size: 18px;
+    font-size: 16px;
+    padding-left: 10px;
+    border-left-width: 2px;
+  }
+
+  .descriptionText {
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .applePrimaryBtn,
+  .appleSecondaryBtn {
+    width: 100%;
+    flex: none;
   }
 
   .macDock {
-    grid-template-columns: repeat(8, 132px);
-    border-radius: 22px;
+    grid-template-columns: repeat(8, 110px);
+    border-radius: 18px;
+    padding: 6px;
+    gap: 6px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .macDock::-webkit-scrollbar {
+    display: none; /* Premium clean invisible scrollbar */
+  }
+
+  .dockItem {
+    min-width: 110px;
+    min-height: 68px;
+    padding: 8px;
+    border-radius: 12px;
+    gap: 8px;
+  }
+
+  .dockImageWrap {
+    width: 36px;
+    height: 42px;
+    border-radius: 10px;
+  }
+
+  .dockLabel {
+    font-size: 13px;
+  }
+
+  .storyBand {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .storyBand h2 {
+    font-size: 24px;
+    line-height: 1.1;
+  }
+
+  .storyStats {
+    gap: 6px;
+  }
+
+  .storyStats span {
+    padding: 8px;
+    font-size: 9px;
+  }
+
+  .storyStats strong {
+    font-size: 20px;
   }
 }
+

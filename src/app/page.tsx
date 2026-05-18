@@ -4,10 +4,10 @@ import { useState, useMemo } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import styles from "./page.module.css";
-import { 
-  MapPin, 
-  Phone, 
-  MessageSquare, 
+import {
+  MapPin,
+  Phone,
+  MessageSquare,
   Sparkles,
   ArrowRight,
   ShieldCheck,
@@ -259,11 +259,11 @@ export default function Home() {
       {/* Apple Frosted Glass Top Nav Bar */}
       <nav className={styles.topNav}>
         <a href="#" className={styles.logo}>
-          <span className={styles.logoTamil}>பாாவை பாரம்பரியம்</span>
+          <span className={styles.logoTamil}>பாவை பாரம்பரியம்</span>
           <div className={styles.logoDivider}></div>
           <span className={styles.logoEnglish}>Paavai</span>
         </a>
-        
+
         <div className={styles.navLinks}>
           <a href="#" className={styles.navLink}>Purity</a>
           <a href="#" className={styles.navLink}>Homestead</a>
@@ -284,10 +284,10 @@ export default function Home() {
 
       {/* Immersive Front Layout Overlay */}
       <div className={styles.overlay}>
-        
+
         {/* Main Grid Split Content */}
         <main className={styles.mainContent}>
-          
+
           {/* Left Column: Giant Hardware Image Frame + Reflection */}
           <div className={styles.heroShowcaseContainer}>
             {/* Immersive MacBook-style hardware card */}
@@ -299,7 +299,7 @@ export default function Home() {
               </div>
               {!imageError[activeProduct.id] ? (
                 <Image
-                  src={`/products/${activeProduct.id}.png`} 
+                  src={`/products/${activeProduct.id}.png`}
                   alt={activeProduct.englishName}
                   fill
                   sizes="(max-width: 768px) 82vw, 420px"
@@ -327,7 +327,7 @@ export default function Home() {
 
           {/* Right Column: Sleek Apple-Style Spec Panel */}
           <div className={`${styles.specPanel} ${styles.interactive}`}>
-            
+
             <div className={styles.productMeta}>
               <span className={styles.productNumberBadge}>Product 0{activeProduct.number} / 08</span>
               <div className={styles.purityBadge}>
@@ -383,18 +383,18 @@ export default function Home() {
 
             {/* Premium CTA Buttons */}
             <div className={styles.buttonGroup}>
-              <a 
+              <a
                 href={`https://wa.me/917200189461?text=${whatsappMessage}`}
-                target="_blank" 
-                rel="noopener noreferrer" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className={styles.applePrimaryBtn}
               >
                 <MessageSquare size={14} />
                 <span>Order on WhatsApp</span>
                 <ArrowRight size={12} />
               </a>
-              <a 
-                href="tel:+917200189461" 
+              <a
+                href="tel:+917200189461"
                 className={styles.appleSecondaryBtn}
               >
                 <Phone size={13} />
@@ -463,10 +463,10 @@ export default function Home() {
             &copy; 2026 பாாவை பாரம்பரியம் (Paavai Paarambariyam). Purity in Heritage.
           </div>
           <div className={`${styles.footerRight} ${styles.interactive}`}>
-            <a 
-              href="https://www.instagram.com/paavai_paarambariyam" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href="https://www.instagram.com/paavai_paarambariyam"
+              target="_blank"
+              rel="noopener noreferrer"
               className={styles.instaLink}
             >
               <InstagramIcon size={12} />
