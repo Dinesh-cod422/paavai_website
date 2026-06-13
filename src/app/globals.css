@@ -1,26 +1,19 @@
 :root {
-  /* Apple Light Canvas + Traditional Organic Colors Theme */
-  --bg-deep-space: #fbfbfa;        /* Clean Ivory White backdrop */
-  --bg-satin-gradient: radial-gradient(circle at 50% 50%, #ffffff 0%, #f4f4f2 100%);
-  --text-primary: #1d1d1f;         /* Deep Charcoal Apple Black */
-  --text-secondary: #515154;       /* Sleek Muted Grey */
-  --text-tertiary: #86868b;        /* Light Grey */
+  /* Warm Earthy / Organic Colors Theme */
+  --bg-cream: #FAF7F2;          /* Clean ivory/beige backdrop */
+  --text-primary: #1C3322;      /* Deep Forest Green/Charcoal */
+  --text-secondary: #4A5F4B;    /* Muted olive green */
+  --text-tertiary: #849681;     /* Light olive grey */
   
-  --accent-gold: #b58d1b;          /* Rich Gold for legibility on light sheets */
-  --accent-gold-rgb: 181, 141, 27;
-  --accent-green: #1b5e20;         /* Traditional Leaf Green */
-  --accent-green-dark: #0d3c12;
-  --accent-red: #c62828;           /* Traditional Spice/Chilli Red */
-  --accent-amber: #e65100;         /* Warm Aromatic Yellow/Amber */
+  --accent-gold: #C09A4D;       /* Warm subtle gold */
+  --accent-green-dark: #1F3F24; /* Button / Primary Green */
+  --accent-green-hover: #132A15;
   
-  /* Modern Premium Frosted Light-Glass */
-  --apple-glass-bg: rgba(255, 255, 255, 0.7);
-  --apple-glass-border: rgba(0, 0, 0, 0.08);
-  --apple-glass-border-hover: rgba(181, 141, 27, 0.35);
-  --apple-shadow: rgba(0, 0, 0, 0.05);
+  --border-color: #E2DFD3;      /* Divider lines */
+  --card-bg: #FFFFFF;           /* Card background */
+  --card-shadow: rgba(0, 0, 0, 0.04);
   
-  /* Apple-style smooth ease-out curves */
-  --apple-transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
   --font-serif-family: var(--font-serif), "Cormorant Garamond", Georgia, serif;
   --font-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
@@ -36,13 +29,8 @@
 html, body {
   width: 100%;
   min-height: 100%;
-  max-width: 100vw;
   overflow-x: hidden;
-  background-color: var(--bg-deep-space);
-  background-image: 
-    var(--bg-satin-gradient),
-    radial-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 0);
-  background-size: 100% 100%, 30px 30px;
+  background-color: var(--bg-cream);
   color: var(--text-primary);
   font-family: var(--font-sans);
   color-scheme: light;
@@ -50,83 +38,23 @@ html, body {
 
 h1, h2, h3, h4, .serif-font {
   font-family: var(--font-serif-family);
-  letter-spacing: -0.01em;
+  font-weight: 600;
 }
 
-/* Custom Minimal Apple Scrollbar */
 ::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-deep-space);
+  background: var(--bg-cream);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(31, 63, 36, 0.2);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-gold);
-}
-
-/* Premium Light Glassmorphism */
-.apple-glass {
-  background: var(--apple-glass-bg);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
-  border: 1px solid var(--apple-glass-border);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.04);
-  border-radius: 18px;
-  transition: var(--apple-transition);
-}
-
-.apple-glass:hover {
-  border-color: var(--apple-glass-border-hover);
-  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.08);
-}
-
-/* Faint organic background shifting aurora lights */
-.glow-orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(130px);
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.22;
-  animation: floatOrb 18s ease-in-out infinite alternate;
-}
-
-@keyframes floatOrb {
-  0% {
-    transform: translate(0, 0) scale(1);
-    opacity: 0.16;
-  }
-  100% {
-    transform: translate(80px, -60px) scale(1.15);
-    opacity: 0.28;
-  }
-}
-
-/* Pulse green light mode */
-.pulse-green {
-  width: 6px;
-  height: 6px;
-  background-color: var(--accent-green);
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(27, 94, 32, 0.4);
-  animation: pulseLight 1.8s infinite alternate;
-}
-
-@keyframes pulseLight {
-  0% {
-    transform: scale(0.95);
-    opacity: 0.6;
-  }
-  100% {
-    transform: scale(1.2);
-    opacity: 1;
-  }
+  background: var(--accent-green-dark);
 }
