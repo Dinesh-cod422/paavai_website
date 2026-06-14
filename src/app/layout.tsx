@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Cormorant_Garamond } from "next/font/google";
 import { CartProvider } from "@/context/CartContext";
 import "./globals.css";
@@ -72,6 +73,19 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${cormorantGaramond.variable}`}>
       <body>
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-7GER5CZHE3`}
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7GER5CZHE3');
+          `}
+        </Script>
+        
         <CartProvider>
           {children}
         </CartProvider>
