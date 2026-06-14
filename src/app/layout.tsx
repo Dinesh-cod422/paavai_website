@@ -16,7 +16,7 @@ const cormorantGaramond = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://paavaiwebsitenew.vercel.app"),
+  metadataBase: new URL("https://paavaiwebsite.vercel.app"),
   title: {
     default: "பாவை பாரம்பரியம் | Paavai Paarampariyam | 100% Natural Homemade Products",
     template: "%s | Paavai Paarampariyam",

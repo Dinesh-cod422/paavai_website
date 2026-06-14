@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { products } from '../data/products';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://paavaiwebsitenew.vercel.app';
+  const baseUrl = 'https://paavaiwebsite.vercel.app';
 
   // Static routes
   const staticRoutes = [
