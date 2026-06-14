@@ -1,0 +1,120 @@
+.shopSection {
+  padding: 6rem 0 8rem;
+  background-color: var(--bg-color, #faf8f5);
+  min-height: 100vh;
+}
+
+.shopHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.searchContainer {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto 4rem auto;
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 1.2rem 1.5rem 1.2rem 3.5rem;
+  font-size: 1.1rem;
+  border: 1px solid rgba(226, 223, 211, 0.8);
+  border-radius: 40px;
+  background-color: white;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--accent-green-dark);
+  box-shadow: 0 8px 25px rgba(28, 51, 34, 0.08);
+}
+
+.searchInput::placeholder {
+  color: #999;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.noResults {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  grid-column: 1 / -1;
+  padding: 4rem 0;
+}
+
+.title {
+  font-size: 3.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  font-family: var(--font-serif-family);
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.leafDecoration {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.leafDecoration::before,
+.leafDecoration::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 100px;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.leafDecoration::before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.leafDecoration::after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 3rem 2rem;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .productGrid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+}

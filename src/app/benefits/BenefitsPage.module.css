@@ -1,0 +1,219 @@
+.main {
+  background-color: #faf8f5;
+  min-height: 100vh;
+}
+
+.hero {
+  position: relative;
+  padding: 8rem 0 6rem;
+  background-color: var(--accent-green-dark);
+  background-image: radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 70%);
+  text-align: center;
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(rgba(212, 175, 55, 0.15) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconWrapper {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-gold);
+  margin-bottom: 2rem;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.title {
+  font-size: 4.5rem;
+  color: white;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  color: var(--accent-gold);
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.contentSection {
+  padding: 6rem 0;
+}
+
+.benefitsList {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.benefitRow {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+  background: white;
+  padding: 3rem;
+  border-radius: 32px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.03);
+  border: 1px solid rgba(226, 223, 211, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.reverseRow {
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.reverseRow .imageColumn {
+  order: 2;
+}
+
+.reverseRow .textColumn {
+  order: 1;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.productImage {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.benefitRow:hover .productImage {
+  transform: scale(1.05);
+}
+
+.textColumn h2 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.benefitsBox {
+  background: #fdfaf6;
+  padding: 2.5rem;
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  position: relative;
+}
+
+.benefitsBox::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-gold), transparent);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.benefitsBox h3 {
+  font-size: 1.5rem;
+  color: var(--accent-green-dark);
+  margin-bottom: 1.5rem;
+}
+
+.benefitsItems {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.benefitsItems li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.checkIcon {
+  color: var(--accent-gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+@keyframes fadeUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 992px) {
+  .benefitRow, .reverseRow {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .reverseRow .imageColumn {
+    order: 1;
+  }
+  
+  .reverseRow .textColumn {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 0 3rem;
+  }
+
+  .contentSection {
+    padding: 3rem 0;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+  
+  .benefitRow {
+    padding: 2rem;
+  }
+  
+  .benefitsBox {
+    padding: 1.5rem;
+  }
+  
+  .textColumn h2 {
+    font-size: 2rem;
+  }
+}

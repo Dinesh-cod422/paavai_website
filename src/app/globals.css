@@ -1,7 +1,8 @@
 :root {
   /* Warm Earthy / Organic Colors Theme */
-  --bg-cream: #FAF7F2;          /* Clean ivory/beige backdrop */
-  --text-primary: #1C3322;      /* Deep Forest Green/Charcoal */
+  --bg-cream: #fdfbf7;          /* Clean ivory/beige backdrop */
+  --bg-secondary: #f6f3eb;      /* Slightly darker cream for sections */
+  --text-primary: #224229;      /* Deep Forest Green */
   --text-secondary: #4A5F4B;    /* Muted olive green */
   --text-tertiary: #849681;     /* Light olive grey */
   
@@ -9,8 +10,8 @@
   --accent-green-dark: #1F3F24; /* Button / Primary Green */
   --accent-green-hover: #132A15;
   
-  --border-color: #E2DFD3;      /* Divider lines */
-  --card-bg: #FFFFFF;           /* Card background */
+  --border-color: #e2dfd3;      /* Divider lines */
+  --card-bg: #f5eedc;           /* Product Card background */
   --card-shadow: rgba(0, 0, 0, 0.04);
   
   --transition-smooth: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
@@ -41,6 +42,76 @@ h1, h2, h3, h4, .serif-font {
   font-weight: 600;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+}
+
+.section-padding {
+  padding: 4rem 0;
+}
+
+.btn-primary {
+  background-color: var(--accent-green-dark);
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border-radius: 40px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 4px 12px rgba(31, 63, 36, 0.15);
+}
+
+.btn-primary:hover {
+  background-color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.1s;
+}
+
+.btn-secondary {
+  border: 1px solid var(--accent-green-dark);
+  color: var(--accent-green-dark);
+  background-color: transparent;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.btn-secondary:hover {
+  background-color: var(--accent-green-dark);
+  color: white;
+}
+
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;

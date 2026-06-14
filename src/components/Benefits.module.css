@@ -1,0 +1,96 @@
+.benefitsSection {
+  background-color: var(--bg-secondary); /* slightly darker background */
+  padding: 4rem 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.benefitsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.leafDecoration {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leafDecoration::before,
+.leafDecoration::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 100px;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.leafDecoration::before {
+  right: 100%;
+  margin-right: 10px;
+}
+
+.leafDecoration::after {
+  left: 100%;
+  margin-left: 10px;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  width: 100%;
+}
+
+.benefitCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 120px;
+}
+
+.iconWrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-green-dark);
+  margin-bottom: 1rem;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition-smooth);
+}
+
+.benefitCard:hover .iconWrapper {
+  transform: translateY(-5px);
+  border-color: var(--accent-green-dark);
+}
+
+.benefitText {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: pre-line;
+  line-height: 1.3;
+}

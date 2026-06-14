@@ -1,0 +1,238 @@
+.heroSection {
+  padding: 2rem 0 6rem 0;
+  position: relative;
+  background: linear-gradient(to right, transparent, rgba(230, 226, 214, 0.4) 60%);
+}
+
+.heroContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.title {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.titleHighlight {
+  color: var(--text-secondary); /* Could be slightly lighter or same */
+}
+
+.description {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+}
+
+.ctaButton {
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  margin-bottom: 4rem;
+  background-color: var(--accent-green-dark);
+}
+
+.features {
+  display: flex;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.featureItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.iconWrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-green-dark);
+  background-color: white;
+}
+
+.featureText {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: pre-line;
+}
+
+.dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(31, 63, 36, 0.3);
+  cursor: pointer;
+}
+
+.activeDot {
+  background-color: var(--accent-green-dark);
+}
+
+.imageContainer {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px; /* Fixed height to support absolute children */
+  width: 100%;
+  max-width: 600px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.heroImage {
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.05); /* Start slightly zoomed in */
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 5s linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.activeImage {
+  opacity: 1;
+  transform: scale(1); /* Zoom out slowly */
+  z-index: 1;
+}
+
+.nameOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2.5rem 1rem 1.5rem 1rem;
+  background: linear-gradient(to top, rgba(28, 51, 34, 0.8) 0%, rgba(28, 51, 34, 0.2) 60%, transparent 100%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  color: white;
+  z-index: 5;
+  text-align: center;
+  transition: opacity 0.5s ease;
+}
+
+.nameOverlay h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  margin: 0;
+}
+
+.sticker {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 100px;
+  height: 100px;
+  background-color: var(--accent-green-dark);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(31, 63, 36, 0.3);
+}
+
+.stickerText {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.stickerSub {
+  font-size: 0.75rem;
+  line-height: 1.2;
+  margin-top: 4px;
+}
+
+@media (max-width: 1024px) {
+  .heroContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .title {
+    font-size: 3.5rem;
+  }
+  
+  .imageContainer {
+    flex: none;
+    height: 400px;
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding-top: 1rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  .features {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .imageContainer {
+    flex: none;
+    height: 350px;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .sticker {
+    width: 80px;
+    height: 80px;
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  .stickerText {
+    font-size: 1.2rem;
+  }
+}

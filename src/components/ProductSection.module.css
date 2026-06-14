@@ -1,0 +1,151 @@
+.productSection {
+  padding: 5rem 0;
+}
+
+.productContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+.headerCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.leafDecoration {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leafDecoration::before,
+.leafDecoration::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 150px;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.leafDecoration::before {
+  right: 100%;
+  margin-right: 10px;
+}
+
+.leafDecoration::after {
+  left: 100%;
+  margin-left: 10px;
+}
+
+.viewAllBtn {
+  position: absolute;
+  right: 0;
+  border: 1px solid var(--accent-gold);
+  color: var(--text-primary);
+  background-color: transparent;
+  padding: 0.5rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: var(--transition-smooth);
+}
+
+.viewAllBtn:hover {
+  background-color: var(--accent-gold);
+  color: white;
+}
+
+.carouselWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem; /* space for arrows */
+}
+
+.productGrid {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto; /* allows scrolling if screen is too small */
+  padding: 1rem 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.productGrid::-webkit-scrollbar {
+  display: none;
+}
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: var(--transition-smooth);
+  z-index: 2;
+}
+
+.navBtn:hover {
+  background-color: var(--accent-green-dark);
+  color: white;
+  border-color: var(--accent-green-dark);
+}
+
+.prevBtn {
+  left: -20px;
+}
+
+.nextBtn {
+  right: -20px;
+}
+
+@media (max-width: 768px) {
+  .leafDecoration::before,
+  .leafDecoration::after {
+    width: 60px;
+  }
+  
+  .viewAllBtn {
+    position: static;
+    margin-top: 1rem;
+  }
+  
+  .headerRow {
+    flex-direction: column;
+  }
+  
+  .prevBtn, .nextBtn {
+    display: none;
+  }
+  
+  .carouselWrapper {
+    padding: 0;
+  }
+}

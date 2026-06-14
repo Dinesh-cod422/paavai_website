@@ -1,0 +1,259 @@
+.emptyMain {
+  padding: 10rem 0;
+  min-height: 70vh;
+  background-color: #faf8f5;
+  display: flex;
+  align-items: center;
+}
+
+.main {
+  padding: 6rem 0 10rem;
+  background-color: #faf8f5;
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: 3rem;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.header h1 {
+  font-size: 3rem;
+  color: var(--text-primary);
+}
+
+.header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.cartItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cartItem {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  gap: 2rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  align-items: center;
+}
+
+.itemImage {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: #f7f3ea;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.itemDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.itemTitle {
+  font-family: var(--font-serif-family);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.itemTitle:hover {
+  color: var(--accent-green-dark);
+}
+
+.itemSize {
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.itemPrice {
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.itemActions {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 40px;
+  overflow: hidden;
+  background: white;
+  height: 45px;
+}
+
+.quantity button {
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 100%;
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.quantity button:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.quantity span {
+  width: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.itemTotal {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent-green-dark);
+  min-width: 80px;
+  text-align: right;
+}
+
+.removeBtn {
+  background: transparent;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.removeBtn:hover {
+  color: #ff4d4f;
+}
+
+.continueShopping {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 1rem;
+  transition: color 0.2s;
+}
+
+.continueShopping:hover {
+  color: var(--accent-green-dark);
+}
+
+.summary {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  position: sticky;
+  top: 100px;
+}
+
+.summary h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.totalRow {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-green-dark);
+}
+
+.checkoutBtn {
+  width: 100%;
+  background-color: var(--accent-green-dark);
+  color: white;
+  border: none;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.checkoutBtn:hover {
+  background-color: var(--text-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 992px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .cartItem {
+    grid-template-columns: 100px 1fr;
+    grid-template-areas: 
+      "image details"
+      "image actions";
+  }
+  
+  .itemImage {
+    grid-area: image;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .itemDetails {
+    grid-area: details;
+  }
+  
+  .itemActions {
+    grid-area: actions;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
