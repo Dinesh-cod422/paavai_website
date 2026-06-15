@@ -7,14 +7,17 @@ import styles from "../components/Toast.module.css";
 
 export interface CartItem extends Product {
   quantity: number;
+  selectedSize: string;
+  selectedPrice: number;
+  cartItemId: string;
 }
 
 interface CartContextType {
   cart: CartItem[];
   wishlist: Product[];
-  addToCart: (product: Product, quantity?: number) => void;
-  removeFromCart: (productId: number) => void;
-  updateQuantity: (productId: number, quantity: number) => void;
+  addToCart: (product: Product, quantity?: number, selectedSize?: string, selectedPrice?: number) => void;
+  removeFromCart: (cartItemId: string) => void;
+  updateQuantity: (cartItemId: string, quantity: number) => void;
   toggleWishlist: (product: Product) => void;
   isInWishlist: (productId: number) => boolean;
   cartTotal: number;
@@ -66,30 +69,34 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     }
   }, [cart, wishlist, isInitialized]);
 
-  const addToCart = (product: Product, quantity: number = 1) => {
+  const addToCart = (product: Product, quantity: number = 1, selectedSize?: string, selectedPrice?: number) => {
+    const size = selectedSize || product.size;
+    const price = selectedPrice || product.price;
+    const cartItemId = `${product.id}_${size}`;
+
     setCart((prev) => {
-      const existing = prev.find((item) => item.id === product.id);
+      const existing = prev.find((item) => item.cartItemId === cartItemId);
       if (existing) {
         return prev.map((item) =>
-          item.id === product.id ? { ...item, quantity: item.quantity + quantity } : item
+          item.cartItemId === cartItemId ? { ...item, quantity: item.quantity + quantity } : item
         );
       }
-      return [...prev, { ...product, quantity }];
+      return [...prev, { ...product, quantity, selectedSize: size, selectedPrice: price, cartItemId }];
     });
     showToast(`Added ${product.title} to Cart`);
   };
 
-  const removeFromCart = (productId: number) => {
-    setCart((prev) => prev.filter((item) => item.id !== productId));
+  const removeFromCart = (cartItemId: string) => {
+    setCart((prev) => prev.filter((item) => item.cartItemId !== cartItemId));
   };
 
-  const updateQuantity = (productId: number, quantity: number) => {
+  const updateQuantity = (cartItemId: string, quantity: number) => {
     if (quantity <= 0) {
-      removeFromCart(productId);
+      removeFromCart(cartItemId);
       return;
     }
     setCart((prev) =>
-      prev.map((item) => (item.id === productId ? { ...item, quantity } : item))
+      prev.map((item) => (item.cartItemId === cartItemId ? { ...item, quantity } : item))
     );
   };
 
@@ -109,7 +116,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     return wishlist.some((item) => item.id === productId);
   };
 
-  const cartTotal = cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  const cartTotal = cart.reduce((total, item) => total + item.selectedPrice * item.quantity, 0);
   const cartCount = cart.length;
 
   return (

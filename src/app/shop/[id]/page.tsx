@@ -70,11 +70,6 @@ export default async function ProductDetails({ params }: { params: { id: string 
             <h1 className={`${styles.title} serif-font`}>{product.title}</h1>
             <p className={styles.shortDesc}>{product.description}</p>
             
-            <div className={styles.priceContainer}>
-              <span className={styles.price}>₹{product.price}</span>
-              <span className={styles.size}>per {product.size}</span>
-            </div>
-
             <p className={styles.longDesc}>{product.longDescription}</p>
 
             <ProductActions product={product} />

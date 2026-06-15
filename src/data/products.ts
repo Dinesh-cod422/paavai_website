@@ -8,14 +8,15 @@ export interface Product {
   longDescription: string;
   benefits: string[];
   ingredients: string[];
+  variants?: { size: string; price: number }[];
 }
 
 export const products: Product[] = [
   {
     id: 1,
     title: "Pure Cow Ghee",
-    size: "500ml",
-    price: 550,
+    size: "1L",
+    price: 600,
     image: "/images/ghee.jpeg",
     description: "Traditionally churned A2 cow milk ghee for authentic taste and health.",
     longDescription: "Our Pure Cow Ghee is made using the traditional Bilona method from farm-fresh A2 cow milk. Slow-cooked to perfection, it retains a rich, nutty aroma, golden granular texture, and essential nutrients. It's a powerhouse of health that adds an irresistible flavor to any meal.",
@@ -39,15 +40,15 @@ export const products: Product[] = [
       "High curcumin content (natural anti-inflammatory)",
       "Enhances immune function",
       "Rich in antioxidants",
-      "100% organic and pure"
+      "100% homemade and pure"
     ],
     ingredients: ["Dried Salem Turmeric"]
   },
   {
     id: 3,
     title: "Nattu Sarkkarai",
-    size: "500g",
-    price: 120,
+    size: "1kg",
+    price: 100,
     image: "/images/nattu_sarkarai.jpeg",
     description: "Unrefined raw country brown sugar directly from sugarcane fields.",
     longDescription: "A healthy, traditional alternative to refined white sugar, our Nattu Sarkkarai is prepared naturally without any chemical bleaching. It retains all the minerals and iron from the sugarcane juice, offering a rich caramel flavor to your teas, coffees, and sweets.",
@@ -57,13 +58,18 @@ export const products: Product[] = [
       "Low glycemic index compared to white sugar",
       "Helps prevent anemia"
     ],
-    ingredients: ["Pure Sugarcane Juice Extract"]
+    ingredients: ["Pure Sugarcane Juice Extract"],
+    variants: [
+      { size: "1kg", price: 100 },
+      { size: "5kg", price: 450 },
+      { size: "10kg", price: 530 }
+    ]
   },
   {
     id: 4,
     title: "Kari Masala",
-    size: "200g",
-    price: 180,
+    size: "250g",
+    price: 150,
     image: "/images/kari_masala.jpeg",
     description: "Authentic and aromatic traditional spice blend for rich curries.",
     longDescription: "Elevate your non-veg and rich vegetarian curries with our signature Kari Masala. This blend is crafted using an age-old family recipe, carefully slow-roasting premium spices to release their natural oils, giving your dishes an unforgettable, deep, and robust flavor.",
@@ -73,13 +79,18 @@ export const products: Product[] = [
       "No added MSG or colors",
       "Boosts metabolism"
     ],
-    ingredients: ["Coriander", "Cumin", "Fennel", "Black Pepper", "Cinnamon", "Cloves", "Cardamom", "Red Chillies"]
+    ingredients: ["Coriander", "Cumin", "Fennel", "Black Pepper", "Cinnamon", "Cloves", "Cardamom", "Red Chillies"],
+    variants: [
+      { size: "250g", price: 150 },
+      { size: "500g", price: 290 },
+      { size: "1kg", price: 580 }
+    ]
   },
   {
     id: 5,
     title: "Milagai Thool",
     size: "250g",
-    price: 160,
+    price: 120,
     image: "/images/milakai_thool.jpeg",
     description: "Premium Red Chilli Powder offering perfect heat and vibrant color.",
     longDescription: "Made from the finest sun-dried red chillies carefully hand-picked for quality. Our Milagai Thool offers the perfect balance of fiery heat and vibrant natural red color, ensuring every dish is visually appealing and spicy without the use of artificial colors.",
@@ -89,7 +100,12 @@ export const products: Product[] = [
       "Vibrant natural color",
       "Spicy and authentic"
     ],
-    ingredients: ["Dried Red Chillies"]
+    ingredients: ["Dried Red Chillies"],
+    variants: [
+      { size: "250g", price: 120 },
+      { size: "500g", price: 230 },
+      { size: "1kg", price: 460 }
+    ]
   },
   {
     id: 6,
@@ -111,7 +127,7 @@ export const products: Product[] = [
     id: 8,
     title: "Sambar Podi",
     size: "250g",
-    price: 200,
+    price: 150,
     image: "/images/sambar_podi.jpeg",
     description: "Classic South Indian lentil soup spice blend.",
     longDescription: "Bring the authentic taste of a traditional South Indian kitchen to your home with our Sambar Podi. Perfectly proportioned lentils and spices are roasted to a golden perfection, delivering an aromatic, thick, and flavorful sambar every single time.",
@@ -121,7 +137,12 @@ export const products: Product[] = [
       "No artificial flavors",
       "Rich in proteins and spices"
     ],
-    ingredients: ["Coriander", "Red Chillies", "Toor Dal", "Chana Dal", "Fenugreek", "Turmeric", "Cumin", "Black Pepper", "Asafoetida"]
+    ingredients: ["Coriander", "Red Chillies", "Toor Dal", "Chana Dal", "Fenugreek", "Turmeric", "Cumin", "Black Pepper", "Asafoetida"],
+    variants: [
+      { size: "250g", price: 150 },
+      { size: "500g", price: 300 },
+      { size: "1kg", price: 580 }
+    ]
   },
   {
     id: 9,

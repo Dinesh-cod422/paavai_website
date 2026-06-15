@@ -20,6 +20,7 @@ export default function ProductCard({ id, image, title, size, price }: ProductCa
   
   const product = products.find(p => p.id === id);
   const isWishlisted = isInWishlist(id);
+  const hasVariants = product?.variants && product.variants.length > 0;
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault(); // prevent navigating to product details
@@ -56,8 +57,10 @@ export default function ProductCard({ id, image, title, size, price }: ProductCa
       <div className={styles.details}>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.size}>{size}</p>
-        <p className={styles.price}>₹{price}</p>
-        <button className={styles.addToCartBtn} onClick={handleAddToCart}>Add to Cart</button>
+        <p className={styles.price}>{hasVariants ? `From ₹${price}` : `₹${price}`}</p>
+        <button className={styles.addToCartBtn} onClick={handleAddToCart}>
+          {hasVariants ? "Select Options" : "Add to Cart"}
+        </button>
       </div>
     </Link>
   );

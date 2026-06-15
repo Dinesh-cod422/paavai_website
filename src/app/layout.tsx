@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Paavai Paarampariyam",
   },
   description: "ஆரோக்கியம் நம் பாரம்பரியம் - Pure homemade, 100% natural, chemical-free spices, ghee, jaggery, and masalas from Erode, Tamil Nadu. Experience the authentic taste of South Indian heritage.",
-  keywords: ["Paavai Paarambariyam", "organic food online", "homemade ghee Erode", "natural jaggery online", "traditional masalas Tamil Nadu", "sattu maavu online", "pure sambar powder", "பாவை பாரம்பரியம்", "chemical free spices india"],
+  keywords: ["Paavai Paarambariyam", "homemade food online", "homemade ghee Erode", "natural jaggery online", "traditional masalas Tamil Nadu", "sattu maavu online", "pure sambar powder", "பாவை பாரம்பரியம்", "chemical free spices india"],
   authors: [{ name: "Paavai Paarampariyam" }],
   creator: "Paavai Paarampariyam",
   openGraph: {

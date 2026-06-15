@@ -16,7 +16,7 @@ export default function CartPage() {
     let message = "Hello Paavai Parampariyam! I would like to place an order:%0A%0A";
     
     cart.forEach((item, index) => {
-      message += `${index + 1}. ${item.title} (${item.size}) x ${item.quantity} = ₹${item.price * item.quantity}%0A`;
+      message += `${index + 1}. ${item.title} (${item.selectedSize}) x ${item.quantity} = ₹${item.selectedPrice * item.quantity}%0A`;
     });
 
     message += `%0A*Total Amount: ₹${cartTotal}*%0A%0APlease let me know the payment details and shipping process. Thank you!`;
@@ -51,29 +51,29 @@ export default function CartPage() {
         <div className={styles.layout}>
           <div className={styles.cartItems}>
             {cart.map((item) => (
-              <div key={item.id} className={styles.cartItem}>
+              <div key={item.cartItemId} className={styles.cartItem}>
                 <div className={styles.itemImage}>
                   <Image src={item.image} alt={item.title} fill sizes="100px" className={styles.image} />
                 </div>
                 
                 <div className={styles.itemDetails}>
                   <Link href={`/shop/${item.id}`} className={styles.itemTitle}>{item.title}</Link>
-                  <span className={styles.itemSize}>{item.size}</span>
-                  <span className={styles.itemPrice}>₹{item.price}</span>
+                  <span className={styles.itemSize}>{item.selectedSize}</span>
+                  <span className={styles.itemPrice}>₹{item.selectedPrice}</span>
                 </div>
 
                 <div className={styles.itemActions}>
                   <div className={styles.quantity}>
-                    <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
+                    <button onClick={() => updateQuantity(item.cartItemId, item.quantity - 1)}>-</button>
                     <span>{item.quantity}</span>
-                    <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
+                    <button onClick={() => updateQuantity(item.cartItemId, item.quantity + 1)}>+</button>
                   </div>
                   <div className={styles.itemTotal}>
-                    ₹{item.price * item.quantity}
+                    ₹{item.selectedPrice * item.quantity}
                   </div>
                   <button 
                     className={styles.removeBtn} 
-                    onClick={() => removeFromCart(item.id)}
+                    onClick={() => removeFromCart(item.cartItemId)}
                     aria-label="Remove item"
                   >
                     <Trash2 size={20} />

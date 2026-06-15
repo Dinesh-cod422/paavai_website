@@ -132,6 +132,36 @@
   color: var(--text-secondary);
 }
 
+.variantSelector {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.variantLabel {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.selectInput {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 8px;
+  background-color: white;
+  color: var(--text-primary);
+  outline: none;
+  cursor: pointer;
+  font-family: var(--font-sans-family);
+  transition: border-color 0.2s ease;
+}
+
+.selectInput:focus {
+  border-color: var(--accent-green-dark);
+}
+
 .actionSectionWrapper {
   display: flex;
   flex-direction: column;
