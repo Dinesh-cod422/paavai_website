@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Geist, Cormorant_Garamond } from "next/font/google";
 import { CartProvider } from "@/context/CartContext";
+import BottomNav from "@/components/BottomNav";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -63,6 +64,23 @@ export const metadata: Metadata = {
     icon: "/images/logo.png",
     apple: "/images/logo.png",
   },
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Paavai",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: "#fdfbf7",
 };
 
 export default function RootLayout({
@@ -88,6 +106,7 @@ export default function RootLayout({
         
         <CartProvider>
           {children}
+          <BottomNav />
         </CartProvider>
       </body>
     </html>
