@@ -20,19 +20,19 @@ const cormorantGaramond = Cormorant_Garamond({
 export const metadata: Metadata = {
   metadataBase: new URL("https://paavaiwebsite.vercel.app"),
   title: {
-    default: "பாவை பாரம்பரியம் | Paavai Paarampariyam | 100% Natural Homemade Products",
+    default: "பாவை பாரம்பரியம் | Paavai Paarampariyam | Authentic Chemical-Free Homemade Products",
     template: "%s | Paavai Paarampariyam",
   },
-  description: "ஆரோக்கியம் நம் பாரம்பரியம் - Pure homemade, 100% natural, chemical-free spices, ghee, jaggery, and masalas from Erode, Tamil Nadu. Experience the authentic taste of South Indian heritage.",
-  keywords: ["Paavai Paarambariyam", "homemade food online", "homemade ghee Erode", "natural jaggery online", "traditional masalas Tamil Nadu", "sattu maavu online", "pure sambar powder", "பாவை பாரம்பரியம்", "chemical free spices india"],
+  description: "ஆரோக்கியம் நம் பாரம்பரியம் - Pure homemade, chemical-free spices, ghee, jaggery, and masalas from Erode, Tamil Nadu. Experience the authentic taste of South Indian heritage without any artificial mixing.",
+  keywords: ["Paavai Paarambariyam", "homemade food online", "homemade ghee Erode", "chemical-free jaggery online", "traditional masalas Tamil Nadu", "sattu maavu online", "pure sambar powder", "பாவை பாரம்பரியம்", "chemical free spices india"],
   authors: [{ name: "Paavai Paarampariyam" }],
   creator: "Paavai Paarampariyam",
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: "/",
-    title: "Paavai Paarampariyam | 100% Natural Homemade Products",
-    description: "Experience the authentic taste of South Indian heritage with our pure, chemical-free traditional food products.",
+    title: "Paavai Paarampariyam | Authentic Chemical-Free Homemade Products",
+    description: "Experience the authentic taste of South Indian heritage with our pure, chemical-free, and traditionally prepared homemade food products.",
     siteName: "Paavai Paarampariyam",
     images: [
       {
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Paavai Paarampariyam",
-    description: "Pure homemade, 100% natural, chemical-free spices, ghee, and masalas.",
+    description: "Pure homemade, chemical-free spices, ghee, and masalas without artificial additives.",
     images: ["/images/ghee.jpeg"],
   },
   robots: {

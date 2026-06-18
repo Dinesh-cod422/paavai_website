@@ -31,7 +31,7 @@ function ShopContent() {
           <div className={styles.shopHeader}>
             <h1 className={`${styles.title} serif-font`}>Premium Collection</h1>
             <p className={styles.subtitle}>
-              Discover our full range of 100% natural, traditionally crafted products. Sourced with care, prepared with love.
+              Discover our full range of chemical-free, traditionally crafted homemade products. Sourced with care, prepared with love without artificial mixing.
             </p>
             <div className={styles.leafDecoration}>
               <Sprout size={28} color="var(--accent-green-dark)" />

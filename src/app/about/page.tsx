@@ -4,7 +4,7 @@ import styles from "./About.module.css";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: "Learn about the heritage, roots, and promise behind Paavai Paarampariyam's 100% natural, traditional food products.",
+  description: "Learn about the heritage, roots, and promise behind Paavai Paarampariyam's chemical-free, traditional homemade food products.",
 };
 
 export default function AboutPage() {
@@ -34,7 +34,7 @@ export default function AboutPage() {
               Founded in <strong>May 2026</strong>, <span className={styles.highlight}>Paavai Paarampariyam</span> was born out of a profound reverence for the forgotten culinary arts of our ancestors. We are not just a brand; we are a revival movement dedicated to bringing the pure, unadulterated richness of traditional Indian food back into the heart of the modern kitchen.
             </p>
             <p>
-              In today's fast-paced world of artificial flavors and mass-produced shortcuts, the genuinely healthy practices of the past are fading away. Our vision is to painstakingly resurrect these time-honored traditions, safeguarding the profound benefits of natural, wholesome food for generations to come.
+              In today's fast-paced world of artificial flavors and mass-produced shortcuts, the genuinely healthy practices of the past are fading away. Our vision is to painstakingly resurrect these time-honored traditions, safeguarding the profound benefits of chemical-free, wholesome homemade food for generations to come.
             </p>
           </div>
 
@@ -55,7 +55,7 @@ export default function AboutPage() {
                 We believe that true flavor cannot be rushed. Our premium range—including <strong>Sun-Dried Sambar Powder, Slow-Roasted Curry Masala, Stone-Ground Turmeric & Chilli, Hand-Churned Golden Ghee, and Nutrient-Dense Healthy Mixes</strong>—is crafted using meticulous, ancestral methods. 
               </p>
               <p>
-                By avoiding industrial processing, we naturally lock in the vital essential oils, vivid colors, and medicinal properties that give our food its authentic, heritage taste.
+                By avoiding industrial processing and artificial mixing, we authentically lock in the vital essential oils, vivid colors, and beneficial properties that give our homemade food its true heritage taste.
               </p>
             </div>
 

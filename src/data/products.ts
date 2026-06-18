@@ -16,7 +16,7 @@ export const products: Product[] = [
     id: 1,
     title: "Pure Cow Ghee",
     size: "1L",
-    price: 600,
+    price: 599,
     image: "/images/ghee.jpeg",
     description: "Traditionally churned A2 cow milk ghee for authentic taste and health.",
     longDescription: "Our Pure Cow Ghee is made using the traditional Bilona method from farm-fresh A2 cow milk. Slow-cooked to perfection, it retains a rich, nutty aroma, golden granular texture, and essential nutrients. It's a powerhouse of health that adds an irresistible flavor to any meal.",
@@ -32,7 +32,7 @@ export const products: Product[] = [
     id: 2,
     title: "Turmeric Powder",
     size: "250g",
-    price: 150,
+    price: 119,
     image: "/images/turmeric_powder.jpeg",
     description: "High-curcumin, sun-dried Salem turmeric powder.",
     longDescription: "Sourced directly from the rich soils of Erode, our Turmeric Powder is sun-dried and ground to retain maximum essential oils and a high curcumin content. It brings vibrant color, authentic flavor, and immense healing properties to your daily cooking.",
@@ -48,7 +48,7 @@ export const products: Product[] = [
     id: 3,
     title: "Nattu Sarkkarai",
     size: "1kg",
-    price: 100,
+    price: 99,
     image: "/images/nattu_sarkarai.jpeg",
     description: "Unrefined raw country brown sugar directly from sugarcane fields.",
     longDescription: "A healthy, traditional alternative to refined white sugar, our Nattu Sarkkarai is prepared naturally without any chemical bleaching. It retains all the minerals and iron from the sugarcane juice, offering a rich caramel flavor to your teas, coffees, and sweets.",
@@ -60,16 +60,16 @@ export const products: Product[] = [
     ],
     ingredients: ["Pure Sugarcane Juice Extract"],
     variants: [
-      { size: "1kg", price: 100 },
-      { size: "5kg", price: 450 },
-      { size: "10kg", price: 530 }
+      { size: "1kg", price: 99 },
+      { size: "5kg", price: 449 },
+      { size: "10kg", price: 919 }
     ]
   },
   {
     id: 4,
     title: "Kari Masala",
     size: "250g",
-    price: 150,
+    price: 149,
     image: "/images/kari_masala.jpeg",
     description: "Authentic and aromatic traditional spice blend for rich curries.",
     longDescription: "Elevate your non-veg and rich vegetarian curries with our signature Kari Masala. This blend is crafted using an age-old family recipe, carefully slow-roasting premium spices to release their natural oils, giving your dishes an unforgettable, deep, and robust flavor.",
@@ -81,16 +81,16 @@ export const products: Product[] = [
     ],
     ingredients: ["Coriander", "Cumin", "Fennel", "Black Pepper", "Cinnamon", "Cloves", "Cardamom", "Red Chillies"],
     variants: [
-      { size: "250g", price: 150 },
-      { size: "500g", price: 290 },
-      { size: "1kg", price: 580 }
+      { size: "250g", price: 149 },
+      { size: "500g", price: 289 },
+      { size: "1kg", price: 579 }
     ]
   },
   {
     id: 5,
     title: "Milagai Thool",
     size: "250g",
-    price: 120,
+    price: 119,
     image: "/images/milakai_thool.jpeg",
     description: "Premium Red Chilli Powder offering perfect heat and vibrant color.",
     longDescription: "Made from the finest sun-dried red chillies carefully hand-picked for quality. Our Milagai Thool offers the perfect balance of fiery heat and vibrant natural red color, ensuring every dish is visually appealing and spicy without the use of artificial colors.",
@@ -102,16 +102,16 @@ export const products: Product[] = [
     ],
     ingredients: ["Dried Red Chillies"],
     variants: [
-      { size: "250g", price: 120 },
-      { size: "500g", price: 230 },
-      { size: "1kg", price: 460 }
+      { size: "250g", price: 119 },
+      { size: "500g", price: 229 },
+      { size: "1kg", price: 459 }
     ]
   },
   {
     id: 6,
     title: "Sathu Maavu",
     size: "500g",
-    price: 350,
+    price: 389,
     image: "/images/sathu_maavu.jpeg",
     description: "Traditional nutritious multi-grain health mix for all ages.",
     longDescription: "A powerhouse of nutrition, our Sathu Maavu is prepared using over 25 carefully selected sprouted grains, millets, pulses, and nuts. This wholesome mix provides essential proteins, vitamins, and minerals, making it the perfect energy-boosting breakfast for children and adults.",
@@ -121,13 +121,17 @@ export const products: Product[] = [
       "Aids in healthy weight management",
       "Easy to digest"
     ],
-    ingredients: ["Sprouted Millets", "Almonds", "Cashews", "Green Gram", "Black Gram", "Wheat", "Cardamom"]
+    ingredients: ["Sprouted Millets", "Almonds", "Cashews", "Green Gram", "Black Gram", "Wheat", "Cardamom"],
+    variants: [
+      { size: "500g", price: 389 },
+      { size: "1kg", price: 779 }
+    ]
   },
   {
     id: 8,
     title: "Sambar Podi",
     size: "250g",
-    price: 150,
+    price: 149,
     image: "/images/sambar_podi.jpeg",
     description: "Classic South Indian lentil soup spice blend.",
     longDescription: "Bring the authentic taste of a traditional South Indian kitchen to your home with our Sambar Podi. Perfectly proportioned lentils and spices are roasted to a golden perfection, delivering an aromatic, thick, and flavorful sambar every single time.",
@@ -139,16 +143,16 @@ export const products: Product[] = [
     ],
     ingredients: ["Coriander", "Red Chillies", "Toor Dal", "Chana Dal", "Fenugreek", "Turmeric", "Cumin", "Black Pepper", "Asafoetida"],
     variants: [
-      { size: "250g", price: 150 },
-      { size: "500g", price: 300 },
-      { size: "1kg", price: 580 }
+      { size: "250g", price: 149 },
+      { size: "500g", price: 299 },
+      { size: "1kg", price: 579 }
     ]
   },
   {
     id: 9,
     title: "Coriander Powder",
     size: "250g",
-    price: 130,
+    price: 129,
     image: "/images/malli_thool.jpeg",
     description: "Freshly ground Malli Thool (Coriander Powder) with a sweet, earthy aroma.",
     longDescription: "Ground from premium quality, plump coriander seeds, our Malli Thool provides a mild, earthy, and sweet aroma. It acts as the perfect thickening agent for gravies and curries while imparting a subtle and cooling flavor profile to balance spicy dishes.",

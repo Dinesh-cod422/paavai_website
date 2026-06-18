@@ -71,7 +71,7 @@ export default function Hero() {
         <div className={styles.imageContainer}>
           <div className={styles.sticker}>
             <span className={styles.stickerText}>100%</span>
-            <span className={styles.stickerSub}>Pure &<br />Natural</span>
+            <span className={styles.stickerSub}>Pure &<br />Homemade</span>
           </div>
 
           <div className={styles.imageWrapper}>

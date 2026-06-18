@@ -10,7 +10,7 @@ import styles from "./ProductDetails.module.css";
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const { id } = await params;
   const product = products.find((p) => p.id === parseInt(id));
-  
+
   if (!product) return { title: "Product Not Found" };
 
   return {
@@ -69,7 +69,7 @@ export default async function ProductDetails({ params }: { params: { id: string 
 
             <h1 className={`${styles.title} serif-font`}>{product.title}</h1>
             <p className={styles.shortDesc}>{product.description}</p>
-            
+
             <p className={styles.longDesc}>{product.longDescription}</p>
 
             <ProductActions product={product} />
@@ -92,7 +92,7 @@ export default async function ProductDetails({ params }: { params: { id: string 
                 <p>{product.ingredients.join(", ")}</p>
               </div>
             </div>
-            
+
           </div>
         </div>
       </div>
